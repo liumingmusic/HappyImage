@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>异步控制</title>
+		<style>
+            #target {
+				width:700px;
+				height:300px;
+				overflow:hidden;
+				position:relative;
+			}
+			#target img {
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+			}
+			#custom-controller i {
+				display:inline-block;
+				margin:0 3px;
+				width:30px;
+				height:30px;
+				background:#aaa;
+				cursor:pointer;
+			}
+			#custom-controller i.active {
+				background:#333;
+			}
+        </style>
+	</head>
+	<body>
+		
+		<div id="target">
+            <div>
+                <div><img src="1.jpg"></div>
+                <div><img src="2.jpg"></div>
+                <div><img src="3.jpg"></div>
+                <div><img src="4.jpg"></div>
+            </div>
+        </div>
+
+        <div id="custom-controller">
+        	<i class="active"></i>
+        	<i></i>
+        	<i></i>
+        	<i></i>
+        </div>
+        
+        <script src="jquery.min.js"></script>
+        <script src="HappyImage.min.js"></script>
+        <script>
+            var app = $( "#target" ).HappyImage({
+            	dot: false
+            });
+            $( "#custom-controller" ).on("click", "i", function () {
+            	$( this ).addClass( "active" ).siblings().removeClass( "active" );
+            	HappyImage( app, $( this ).index() );
+            })
+        </script>
+
+	</body>
+</html>

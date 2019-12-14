@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自动轮播</title>
+		<style>
+            #target {
+				width:700px;
+				height:300px;
+				overflow:hidden;
+				position:relative;
+			}
+			#target img {
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+			}
+        </style>
+	</head>
+	<body>
+		
+		<div id="target">
+            <div>
+                <div><img src="1.jpg"></div>
+                <div><img src="2.jpg"></div>
+                <div><img src="3.jpg"></div>
+                <div><img src="4.jpg"></div>
+            </div>
+        </div>
+        
+        <script src="jquery.min.js"></script>
+        <script src="HappyImage.min.js"></script>
+        <script>
+            $( "#target" ).HappyImage({
+            	autoplay: 5000
+            });
+        </script>
+
+	</body>
+</html>
