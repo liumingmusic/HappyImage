@@ -3,9 +3,6 @@
 ### 版本
 最新版：1.0.0
 
-### 文件
-`HappyImage.js`&nbsp;&nbsp;&nbsp;&nbsp;（18KB）（es6 语法）<br>
-`HappyImage.min.js`&nbsp;（10KB）（es5 语法）
 
 ### 依赖
 
